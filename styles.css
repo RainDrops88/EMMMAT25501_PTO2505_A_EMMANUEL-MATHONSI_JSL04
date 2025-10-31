@@ -237,6 +237,28 @@ h2 {
   font-size: 1.12rem;
 }
 
+#close-btn {
+  margin-left: 95%;
+  color: red;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+label {
+  color: rgba(130, 143, 163, 1);
+  font-size: 0.75rem;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
 
 /* ========================
    Responsive Styles
