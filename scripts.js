@@ -65,3 +65,12 @@ function renderTask(task) {
     if (container) container.appendChild(createTaskElement(task));
   });
 }
+
+function openTaskModal(task) {
+  const modal = document.getElementById('task-modal');
+  document.getElementById('task-title').value = task.title;
+  document.getElementById('task-desc').value = task.description;
+  document.getElementById('task-status').value = task.status;
+  modal.showModal();
+  
+}
