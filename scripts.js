@@ -49,3 +49,19 @@ function createTaskElement(task) {
   div.addEventListener('click', () => openTaskModal(task));
   return div;
 }
+
+function getTaskContainerByStatus(status) {
+  const column = document.querySelector(`.column-div[data-status="${status}"]`);
+  return column ? column.querySelector('.tasks-container') : null;
+}
+
+function clearExistingTasks() {
+  document.querySelectorAll('.tasks-container').forEach(c => c.innerHTML = '');
+}
+
+function renderTask(task) {
+  task.forEach(task => {
+    const container = getTaskContainerByStatus(task.status);
+    if (container) container.appendChild(createTaskElement(task));
+  });
+}
