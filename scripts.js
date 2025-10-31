@@ -40,3 +40,12 @@ const initialTasks = [
     status: "done",
   },
 ];
+
+function createTaskElement(task) {
+  const div = document.createElement('div');
+  div.className = 'task-div';
+  div.textContent = task.title;
+  div.dataset.taskId = task.id;
+  div.addEventListener('click', () => openTaskModal(task));
+  return div;
+}
