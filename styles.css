@@ -265,7 +265,7 @@ label {
 ======================== */
 
 /******** Tablets ********/
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1025px) {
   .side-bar {
     display: none; /* Hide sidebar on tablets and smaller */
   }
@@ -339,6 +339,10 @@ label {
   .column-div {
     width: 100%;
   }
+
+  .modal-content {
+    width: 50%;
+  }
 }
 
 /******** Mobile ********/
@@ -352,5 +356,10 @@ label {
 
   .column-div {
     padding: 24px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 1rem;
   }
 }
