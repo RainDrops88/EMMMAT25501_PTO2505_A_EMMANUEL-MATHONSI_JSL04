@@ -1,3 +1,4 @@
+//--GIVEN INITIAL TASK LIST--//
 const initialTasks = [
   {
     id: 1,
@@ -41,6 +42,7 @@ const initialTasks = [
   },
 ];
 
+//---FUNCTION TO CREATE TASKS ELEMENT--//
 function createTaskElement(task) {
   const div = document.createElement('div');
   div.className = 'task-div';
@@ -50,15 +52,18 @@ function createTaskElement(task) {
   return div;
 }
 
+//--FUNCTION TO GROUP THE TASKS BY THEIR STATUS--//
 function getTaskContainerByStatus(status) {
   const column = document.querySelector(`.column-div[data-status="${status}"]`);
   return column ? column.querySelector('.tasks-container') : null;
 }
 
+//--FUNCTION TO CLEAR THE TASKS THAT HAVE BEEN GROUPED FROM THE LIST--//
 function clearExistingTasks() {
   document.querySelectorAll('.tasks-container').forEach(c => c.innerHTML = '');
 }
 
+//--FUNCTION TO ADD THE TASK ON THE CORRECT COLUMN BASED ON THEIR STATUS--//
 function renderTask(task) {
   task.forEach(task => {
     const container = getTaskContainerByStatus(task.status);
@@ -66,6 +71,7 @@ function renderTask(task) {
   });
 }
 
+//--FUNCTION TO UPDATE THE COUNTS OF HOW MANY TASKS HAVE BEEN ADDED ON EACH COLUMN--//
 function updateCounts() {
   document.querySelectorAll(".column-div").forEach(column => {
     const count = column.querySelectorAll(".task-div").length;
@@ -73,6 +79,7 @@ function updateCounts() {
   });
 }
 
+//--FUNCTION THAT OPENS THE MODAL WHEN THE USER CLICK A TASK AND DISPLAY THE DATA ON THE CLICKED TASK--//
 function openTaskModal(task) {
   const modal = document.getElementById('task-modal');
   document.getElementById('task-title').value = task.title;
@@ -82,11 +89,13 @@ function openTaskModal(task) {
   
 }
 
+//-- FUNCTION TO CLOSE THE MODAL WHEN THE RED CROSS IS CLICKED--//
 function ModalCloseHandler() {
   const modal = document.getElementById('task-modal');
   document.getElementById("close-btn").addEventListener('click', () => modal.close());
 }
 
+//--FUNCTION THAT CALLS ALL THE OTHER FUCTIONS TO RUN WHEN IT IS CALLED--//
 function initTasklistBoard() {
   clearExistingTasks();
   renderTask(initialTasks);
@@ -94,4 +103,4 @@ function initTasklistBoard() {
   ModalCloseHandler();
 }
 
-document.addEventListener('DOMContentLoaded', initTasklistBoard);
+document.addEventListener('DOMContentLoaded', initTasklistBoard);// RUNS ALL THE FUNCTIONS AFTER THE DOM HAVE LOADED--//
