@@ -47,3 +47,13 @@ A fully functional **dynamic task board** where tasks appear under the correct c
   4. Creates functions to manipulate the HTML and place the given data in correct columns.
   5. Click the cards to ensure that the modal is responding.
   4. Use Git to track your progress with frequent commits.
+
+ ## 🌐 Socials
+
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/RainDrops88)  
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuel-mathonsi-300b33308/)  
+📧 Email: [07942jerry@gmail.com]
+
+## GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=RainDrops88&theme=default&show_icons=true&hide_border=true&count_private=true)
