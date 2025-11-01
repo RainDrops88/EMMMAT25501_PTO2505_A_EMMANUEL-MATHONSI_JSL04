@@ -66,6 +66,13 @@ function renderTask(task) {
   });
 }
 
+function updateCounts() {
+  document.querySelectorAll(".column-div").forEach(column => {
+    const count = column.querySelectorAll(".task-div").length;
+    column.querySelector(".count").innerText = count;
+  });
+}
+
 function openTaskModal(task) {
   const modal = document.getElementById('task-modal');
   document.getElementById('task-title').value = task.title;
@@ -83,6 +90,7 @@ function ModalCloseHandler() {
 function initTasklistBoard() {
   clearExistingTasks();
   renderTask(initialTasks);
+  updateCounts();
   ModalCloseHandler();
 }
 
