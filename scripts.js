@@ -74,3 +74,14 @@ function openTaskModal(task) {
   modal.showModal();
   
 }
+
+function ModalCloseHandler() {
+  const modal = document.getElementById('task-modal');
+  document.getElementById("close-btn").addEventListener('click', () => modal.close());
+}
+
+function initTasklistBoard() {
+  clearExistingTasks();
+  renderTask(initialTasks);
+  ModalCloseHandler();
+}
