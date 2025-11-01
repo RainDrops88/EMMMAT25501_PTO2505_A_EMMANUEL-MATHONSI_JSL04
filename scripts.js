@@ -85,3 +85,5 @@ function initTasklistBoard() {
   renderTask(initialTasks);
   ModalCloseHandler();
 }
+
+document.addEventListener('DOMContentLoaded', initTasklistBoard);
