@@ -34,3 +34,16 @@ In this project, you will dynamically display tasks from the **given initial dat
 - Structure JavaScript using **modular, single-responsibility functions**.
 - Use **descriptive and meaningful variable and function names** for clarity.
 - Add **JSDoc comments** to major functions, describing their purpose, parameters, and return values for better documentation.
+
+## Expected Outcome
+
+A fully functional **dynamic task board** where tasks appear under the correct columns, and users can **open a modal to view/edit** task details. The project will follow **clean, well-documented, and maintainable code practices**, ensuring a professional and scalable implementation.
+
+## Project Setup Instructions
+
+  1. Clone your starter project folder (or create a new repo).
+  2. Build your site using HTML, CSS and JavaScript.
+  3. Test it on different screen sizes for responsiveness.
+  4. Creates functions to manipulate the HTML and place the given data in correct columns.
+  5. Click the cards to ensure that the modal is responding.
+  4. Use Git to track your progress with frequent commits.
