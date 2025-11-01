@@ -70,7 +70,6 @@ function getTaskContainerByStatus(status) {
   return column ? column.querySelector('.tasks-container') : null;
 }
 
-//--FUNCTION TO CLEAR THE TASKS THAT HAVE BEEN GROUPED FROM THE LIST--//
 /**
  * Clears all existing tasks from every task container in the document.
  * Selects all elements with the class `.tasks-container` and removes their contents.
@@ -124,7 +123,7 @@ function updateCounts() {
  * @param {string|number} task.id - The unique identifier of the task.
  * @param {string} task.title - The title of the task.
  * @param {string} task.description - A description or details about the task.
- * @param {string} task.status - The current status of the task (e.g., "todo", "in-progress", "done").
+ * @param {string} task.status - The current status of the task (e.g., "todo", "doing", "done").
  * @returns {void}
  */
 function openTaskModal(task) {
@@ -160,7 +159,6 @@ function initTasklistBoard() {
   updateCounts();
   ModalCloseHandler();
 }
-
 
 /**
  * Initializes the task list board after the DOM has fully loaded.
